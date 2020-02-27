@@ -16,7 +16,7 @@ while True:
     img_hsv = cv2.cvtColor(frame, cv2.COLOR_RGB2HSV) # change to hsv for mask extraction
 
     #mask
-    mask_hsv = cv2.inRange(img_hsv, np.array([0, 0, 0]), np.array([180, 255, 120]))
+    mask_hsv = cv2.inRange(img_hsv, np.array([0, 0, 0]), np.array([180, 255, 110]))
 
     masked = np.copy(frame)
     masked[mask_hsv==0] = [0, 0, 0]
